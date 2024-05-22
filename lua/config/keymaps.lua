@@ -5,19 +5,11 @@
 --
 
 local pam = vim.keymap.del
-pam("n", "<leader>ww")
-pam("n", "<leader>wd")
-pam("n", "<leader>w-")
-pam("n", "<leader>w|")
-pam("n", "<leader>xl")
-pam("n", "<leader>xq")
-pam("n", "<leader>qq")
 pam("n", "<C-L>")
+pam("n", "<leader>ww")
 
 local map = vim.keymap.set
-map("n", "<leader>w", "<cmd>w<cr><esc>", { desc = "Save File" })
-map("n", "<leader>x", "<cmd>bd<cr>", { desc = "Buffer delete" })
-map("n", "<leader>q", "<cmd>qa<cr>", { desc = "Quit" })
+map("n", "<leader>ww", "<cmd>w<cr><esc>", { desc = "Save File" })
 map("n", "gl", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 map("n", "gh", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 map("n", "<C-L>", "<cmd>!/usr/bin/php -l %<cr>", { desc = "PHP Synctax Check" })
